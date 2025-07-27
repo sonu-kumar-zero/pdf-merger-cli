@@ -1,0 +1,27 @@
+{
+  "name": "pdf-merge-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to merge PDFs from a folder",
+  "main": "bin/index.js",
+  "bin": {
+    "pdf-merge-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "start": "npm run build && node ./dist/index.js",
+    "dev": "nodemon --exec ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "pdf-lib": "^1.17.1"
+  }
+}
