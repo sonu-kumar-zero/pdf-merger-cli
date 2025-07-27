@@ -4,10 +4,6 @@ import fs from "fs-extra";
 import path from "path";
 import { PDFDocument } from "pdf-lib";
 
-// const srcDir = path.join(__dirname, "pdf-src");
-// const distDir = path.join(__dirname, "pdf-dist");
-// const outputPath = path.join(distDir, "merged.pdf");
-
 async function mergePDFs(srcDir: string, outputPath: string): Promise<void> {
   try {
     const files = await fs.readdir(srcDir);
@@ -42,8 +38,6 @@ async function mergePDFs(srcDir: string, outputPath: string): Promise<void> {
     console.error("❌ Error merging PDFs:", error);
   }
 }
-
-// mergePDFs();
 
 // Get arguments from CLI
 const [, , src, out] = process.argv;
